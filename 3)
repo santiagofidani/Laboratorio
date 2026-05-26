@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indicar precio de lista: ");
+        decimal precioLista = decimal.Parse(Console.ReadLine());
+        
+        decimal precioConDescuento = precioLista * 0.82m;
+        
+        Console.WriteLine($"Precio de lista: ${precioLista:0.00}");
+        Console.WriteLine("Descuento: 18% sobre el precio de lista.");
+        Console.WriteLine($"Precio con descuento: ${precioConDescuento:0.00}");
+    }
+}
