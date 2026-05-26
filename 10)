@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int numero;
+        int unidades;
+        int decenas;
+        int centenas;
+
+        Console.Write("Ingrese un numero de 3 digitos: ");
+        numero = Convert.ToInt32(Console.ReadLine());
+
+        if (numero >= 100 && numero <= 999)
+        {
+            centenas = numero / 100;
+            decenas = (numero - centenas * 100) / 10;
+            unidades = numero - centenas * 100 - decenas * 10;
+
+            Console.WriteLine("Valor ingresado: " + numero);
+            Console.WriteLine("Unidades: " + unidades);
+            Console.WriteLine("Decenas: " + decenas);
+            Console.WriteLine("Centenas: " + centenas);
+        }
+        else
+        {
+            Console.WriteLine("Debe ingresar un numero de 3 digitos");
+        }
+    }
+}
