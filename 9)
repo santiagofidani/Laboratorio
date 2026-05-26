@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int hora1;
+        int minuto1;
+        int segundo1;
+
+        int hora2;
+        int minuto2;
+        int segundo2;
+
+        int total1;
+        int total2;
+        int intervalo;
+
+        Console.Write("Ingrese la primera hora: ");
+        hora1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese los primeros minutos: ");
+        minuto1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese los primeros segundos: ");
+        segundo1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese la segunda hora: ");
+        hora2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese los segundos minutos: ");
+        minuto2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese los segundos segundos: ");
+        segundo2 = Convert.ToInt32(Console.ReadLine());
+
+        total1 = hora1 * 3600 + minuto1 * 60 + segundo1;
+        total2 = hora2 * 3600 + minuto2 * 60 + segundo2;
+
+        intervalo = total2 - total1;
+
+        Console.WriteLine("El intervalo en segundos es: " + intervalo);
+    }
+}
