@@ -1,0 +1,22 @@
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingresa un número de dos cifras (10 - 99): ");
+        int numero = int.Parse(Console.ReadLine());
+
+        if (numero >= 10 && numero <= 99)
+        {
+            int decenas = numero / 10;
+            int unidades = numero % 10;
+
+            Console.WriteLine($"Número ingresado: {numero}");
+            Console.WriteLine($"Cifra de las decenas: {decenas}");
+            Console.WriteLine($"Cifra de las unidades: {unidades}");
+        }
+        else
+        {
+            Console.WriteLine("Error: El número debe tener dos cifras, entre 10 y 99.");
+        }
+    }
+}
