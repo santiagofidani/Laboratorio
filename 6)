@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indicar una fecha como un entero de 6 dígitos: ");
+        string fecha = Console.ReadLine();
+
+        if (fecha.Length == 6)
+        {
+            string mes = "" + fecha[2] + fecha[3];
+
+            Console.WriteLine($"Fecha: {fecha}");
+            Console.WriteLine($"Mes: {mes}");
+        }
+        else
+        {
+            Console.WriteLine("Error: Tenés que ingresar exactamente 6 dígitos.");
+        }
+    }
+}
