@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indicar un número de dos cifras: ");
+        string numero = Console.ReadLine();
+
+        if (numero.Length == 2)
+        {
+            char primera = numero[0];
+            char segunda = numero[1];
+            string permutado = "" + segunda + primera;
+
+            Console.WriteLine($"Valor: {numero}");
+            Console.WriteLine($"Valor permutado: {permutado}");
+        }
+        else
+        {
+            Console.WriteLine("Error: Tenés que ingresar exactamente dos cifras.");
+        }
+    }
+}
