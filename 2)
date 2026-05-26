@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indicar un número de tres cifras: ");
+        string numero = Console.ReadLine();
+
+        if (numero.Length == 3)
+        {
+            char cifraCentral = numero[1];
+
+            Console.WriteLine($"Valor: {numero}");
+            Console.WriteLine($"La cifra central es: {cifraCentral}");
+        }
+        else
+        {
+            Console.WriteLine("Error: Tenés que ingresar exactamente tres cifras.");
+        }
+    }
+}
