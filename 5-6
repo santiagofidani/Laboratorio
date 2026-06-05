@@ -1,0 +1,866 @@
+BLOQUE 1:
+
+ A)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 100; i++)
+        {
+            if (i % 3 == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+B)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese su edad: ");
+        int edad = Convert.ToInt32(Console.ReadLine());
+
+        if (edad < 18)
+        {
+            Console.WriteLine("Menor de edad");
+        }
+        else if (edad == 18)
+        {
+            Console.WriteLine("Tiene justo 18");
+        }
+        else
+        {
+            Console.WriteLine("Mayor de edad");
+        }
+    }
+}
+
+
+
+C)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese una palabra: ");
+        string palabra = Console.ReadLine();
+
+        Console.WriteLine("Tiene " + palabra.Length + " letras");
+    }
+}
+
+D)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string clave = "1234";
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write("Ingrese la contraseña: ");
+            string intento = Console.ReadLine();
+
+            if (intento == clave)
+            {
+                Console.WriteLine("Correcta");
+                break;
+            }
+        }
+    }
+}
+
+E)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int mayor = 0;
+
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.Write("Ingrese un número: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (i == 1 || num > mayor)
+            {
+                mayor = num;
+            }
+        }
+
+        Console.WriteLine("El mayor es: " + mayor);
+    }
+}
+
+F)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese su nombre: ");
+        string nombre = Console.ReadLine();
+
+        Console.WriteLine("Hola " + nombre.ToUpper());
+    }
+}
+
+G)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine("7 x " + i + " = " + (7 * i));
+        }
+    }
+}
+
+
+
+H)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 10; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+
+        Console.WriteLine("oa");
+    }
+}
+
+I)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (num % 2 == 0)
+        {
+            Console.WriteLine("Par");
+        }
+        else
+        {
+            Console.WriteLine("Impar");
+        }
+    }
+}
+
+J)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese una frase: ");
+        string frase = Console.ReadLine().ToLower();
+
+        int contador = 0;
+
+        foreach (char letra in frase)
+        {
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
+            {
+                contador++;
+            }
+        }
+
+        Console.WriteLine("Cantidad de vocales: " + contador);
+    }
+}
+
+K)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= 12; i++)
+        {
+            Console.WriteLine(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+L)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int suma = 0;
+
+        while (suma <= 100)
+        {
+            Console.Write("Ingrese un número: ");
+            suma += Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.WriteLine("Total acumulado: " + suma);
+    }
+}
+
+M)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese una palabra: ");
+        string palabra = Console.ReadLine();
+
+        foreach (char letra in palabra)
+        {
+            Console.WriteLine(letra);
+        }
+    }
+}
+
+N)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese su edad: ");
+        int edad = Convert.ToInt32(Console.ReadLine());
+
+        if (edad >= 18)
+        {
+            Console.WriteLine("Puede votar y manejar");
+        }
+        else if (edad >= 16)
+        {
+            Console.WriteLine("Puede votar");
+        }
+        else
+        {
+            Console.WriteLine("No puede ninguna");
+        }
+    }
+}
+
+O)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 50; i >= 0; i -= 5)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
+P)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string clave1;
+        string clave2;
+
+        do
+        {
+            Console.Write("Ingrese una contraseña: ");
+            clave1 = Console.ReadLine();
+
+            Console.Write("Repita la contraseña: ");
+            clave2 = Console.ReadLine();
+
+        } while (clave1 != clave2);
+
+        Console.WriteLine("Acceso permitido");
+    }
+}
+
+Q)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string nombre;
+
+        do
+        {
+            Console.Write("Ingrese un nombre: ");
+            nombre = Console.ReadLine();
+
+        } while (nombre.Length <= 10);
+
+        Console.WriteLine("Fin del programa");
+    }
+}
+
+R)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese una oración: ");
+        string oracion = Console.ReadLine().ToLower();
+
+        int contador = 0;
+
+        foreach (char letra in oracion)
+        {
+            if (letra == 'a')
+            {
+                contador++;
+            }
+        }
+
+        Console.WriteLine("Cantidad de letras a: " + contador);
+    }
+}
+
+
+BLOQUE 2:
+
+A)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese el número secreto (1 al 10): ");
+        int secreto = Convert.ToInt32(Console.ReadLine());
+
+        int numero = 0;
+
+        while (numero != secreto)
+        {
+            Console.Write("Adivine el número: ");
+            numero = Convert.ToInt32(Console.ReadLine());
+
+            if (numero < secreto)
+            {
+                Console.WriteLine("Es mayor");
+            }
+            else if (numero > secreto)
+            {
+                Console.WriteLine("Es menor");
+            }
+        }
+
+        Console.WriteLine("¡Adivinaste!");
+    }
+}
+
+B)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número: ");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= numero; i++)
+        {
+            if (numero % i == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+
+C)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int a = 0;
+        int b = 1;
+        int c;
+
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+
+        for (int i = 3; i <= 20; i++)
+        {
+            c = a + b;
+
+            Console.WriteLine(c);
+
+            a = b;
+            b = c;
+        }
+    }
+}
+
+D)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("1-Suma");
+        Console.WriteLine("2-Resta");
+        Console.WriteLine("3-Multiplicación");
+        Console.WriteLine("4-División");
+
+        int opcion = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Primer número: ");
+        double n1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Segundo número: ");
+        double n2 = Convert.ToDouble(Console.ReadLine());
+
+        if (opcion == 1)
+        {
+            Console.WriteLine(n1 + n2);
+        }
+        else if (opcion == 2)
+        {
+            Console.WriteLine(n1 - n2);
+        }
+        else if (opcion == 3)
+        {
+            Console.WriteLine(n1 * n2);
+        }
+        else if (opcion == 4)
+        {
+            Console.WriteLine(n1 / n2);
+        }
+    }
+}
+
+E)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número: ");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        int factorial = 1;
+
+        for (int i = 1; i <= numero; i++)
+        {
+            factorial = factorial * i;
+        }
+
+        Console.WriteLine("Factorial: " + factorial);
+    }
+}
+
+F)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] nombres = new string[5];
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Nombre: ");
+            nombres[i] = Console.ReadLine();
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Turno " + (i + 1) + ": " + nombres[i]);
+        }
+    }
+}
+
+G)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int contador = 0;
+
+        for (int i = 1; i <= 100; i++)
+        {
+            if (i % 2 == 0)
+            {
+                contador++;
+            }
+        }
+
+        Console.WriteLine("Hay " + contador + " números pares");
+    }
+}
+
+H)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string respuesta;
+
+        do
+        {
+            Console.Write("Ingrese grados Celsius: ");
+            double c = Convert.ToDouble(Console.ReadLine());
+
+            double f = (c * 9 / 5) + 32;
+
+            Console.WriteLine("Fahrenheit: " + f);
+
+            Console.Write("¿Desea continuar? (si/no): ");
+            respuesta = Console.ReadLine();
+
+        } while (respuesta == "si");
+    }
+}
+
+I)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número: ");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        int contador = 0;
+
+        for (int i = 1; i <= numero; i++)
+        {
+            if (numero % i == 0)
+            {
+                contador++;
+            }
+        }
+
+        if (contador == 2)
+        {
+            Console.WriteLine("Es primo");
+        }
+        else
+        {
+            Console.WriteLine("No es primo");
+        }
+    }
+}
+J)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string nombre;
+
+        do
+        {
+            Console.Write("Ingrese un nombre: ");
+            nombre = Console.ReadLine();
+
+            if (nombre != "fin")
+            {
+                Console.WriteLine("Hola " + nombre);
+            }
+
+        } while (nombre != "fin");
+    }
+}
+
+K)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] nombres = new string[100];
+
+        int cantidad = 0;
+        bool repetido = false;
+
+        while (repetido == false)
+        {
+            Console.Write("Ingrese un nombre: ");
+            string nombre = Console.ReadLine();
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                if (nombres[i] == nombre)
+                {
+                    repetido = true;
+                }
+            }
+
+            if (repetido == false)
+            {
+                nombres[cantidad] = nombre;
+                cantidad++;
+            }
+        }
+
+        Console.WriteLine("Se ingresaron " + cantidad + " nombres antes del repetido.");
+    }
+}
+
+L)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 100; i <= 200; i++)
+        {
+            if (i % 7 == 0 && i % 10 == 3)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+M)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double total = 0;
+        int productos = 0;
+
+        while (total <= 1000)
+        {
+            Console.Write("Ingrese un precio: ");
+            double precio = Convert.ToDouble(Console.ReadLine());
+
+            total = total + precio;
+            productos++;
+        }
+
+        Console.WriteLine("Cantidad de productos: " + productos);
+    }
+}
+
+N)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nombre: ");
+        string nombre = Console.ReadLine();
+
+        Console.Write("Edad: ");
+        int edad = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Mail: ");
+        string mail = Console.ReadLine();
+
+        if (mail.Contains("@"))
+        {
+            Console.WriteLine("Datos válidos");
+        }
+        else
+        {
+            Console.WriteLine("Mail inválido");
+        }
+    }
+}
+
+O)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número: ");
+        string numero = Console.ReadLine();
+
+        for (int i = 0; i < numero.Length; i++)
+        {
+            Console.WriteLine(numero[i]);
+        }
+    }
+}
+
+P)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int jugador1 = 0;
+        int jugador2 = 0;
+
+        for (int ronda = 1; ronda <= 3; ronda++)
+        {
+            Console.Write("Jugador 1 (piedra/papel/tijera): ");
+            string j1 = Console.ReadLine();
+
+            Console.Write("Jugador 2 (piedra/papel/tijera): ");
+            string j2 = Console.ReadLine();
+
+            if (
+                (j1 == "piedra" && j2 == "tijera") ||
+                (j1 == "papel" && j2 == "piedra") ||
+                (j1 == "tijera" && j2 == "papel")
+               )
+            {
+                jugador1++;
+            }
+            else if (
+                (j2 == "piedra" && j1 == "tijera") ||
+                (j2 == "papel" && j1 == "piedra") ||
+                (j2 == "tijera" && j1 == "papel")
+                    )
+            {
+                jugador2++;
+            }
+        }
+
+        Console.WriteLine("Jugador 1 ganó: " + jugador1);
+        Console.WriteLine("Jugador 2 ganó: " + jugador2);
+    }
+}
+
+
+R)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string mejorNombre = "";
+        double mejorNota = 0;
+        double suma = 0;
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write("Nombre: ");
+            string nombre = Console.ReadLine();
+
+            Console.Write("Nota: ");
+            double nota = Convert.ToDouble(Console.ReadLine());
+
+            suma = suma + nota;
+
+            if (i == 1 || nota > mejorNota)
+            {
+                mejorNota = nota;
+                mejorNombre = nombre;
+            }
+        }
+
+        Console.WriteLine("Promedio: " + (suma / 5));
+        Console.WriteLine("Mejor alumno: " + mejorNombre);
+        Console.WriteLine("Mejor nota: " + mejorNota);
+    }
+}
+
+
+S)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (char letra = 'Z'; letra >= 'A'; letra--)
+        {
+            Console.WriteLine(letra);
+        }
+    }
+}
