@@ -1,0 +1,418 @@
+using System;
+
+public class HelloWorld
+{
+    static void Ejercicio2A()
+{
+Console.Write("Ingrese el número secreto (1 al 10): ");
+int secreto = Convert.ToInt32(Console.ReadLine());
+
+int numero = 0;
+
+while (numero != secreto)
+{
+    Console.Write("Adivine el número: ");
+    numero = Convert.ToInt32(Console.ReadLine());
+
+    if (numero < secreto)
+        Console.WriteLine("Es mayor");
+    else if (numero > secreto)
+        Console.WriteLine("Es menor");
+}
+
+Console.WriteLine("¡Adivinaste!");
+
+}
+
+static void Ejercicio2B()
+{
+Console.Write("Ingrese un número: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= numero; i++)
+{
+    if (numero % i == 0)
+        Console.WriteLine(i);
+}
+
+}
+
+static void Ejercicio2C()
+{
+int a = 0;
+int b = 1;
+int c;
+
+Console.WriteLine(a);
+Console.WriteLine(b);
+
+for (int i = 3; i <= 20; i++)
+{
+    c = a + b;
+    Console.WriteLine(c);
+
+    a = b;
+    b = c;
+}
+
+}
+
+static void Ejercicio2D()
+{
+Console.WriteLine("1-Suma");
+Console.WriteLine("2-Resta");
+Console.WriteLine("3-Multiplicación");
+Console.WriteLine("4-División");
+
+int opcion = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Primer número: ");
+double n1 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Segundo número: ");
+double n2 = Convert.ToDouble(Console.ReadLine());
+
+if (opcion == 1)
+    Console.WriteLine(n1 + n2);
+else if (opcion == 2)
+    Console.WriteLine(n1 - n2);
+else if (opcion == 3)
+    Console.WriteLine(n1 * n2);
+else if (opcion == 4)
+    Console.WriteLine(n1 / n2);
+
+}
+
+static void Ejercicio2E()
+{
+Console.Write("Ingrese un número: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+
+int factorial = 1;
+
+for (int i = 1; i <= numero; i++)
+{
+    factorial *= i;
+}
+
+Console.WriteLine("Factorial: " + factorial);
+
+}
+
+static void Ejercicio2F()
+{
+string[] nombres = new string[5];
+
+for (int i = 0; i < 5; i++)
+{
+    Console.Write("Nombre: ");
+    nombres[i] = Console.ReadLine();
+}
+
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine("Turno " + (i + 1) + ": " + nombres[i]);
+}
+
+}
+
+static void Ejercicio2G()
+{
+int contador = 0;
+
+for (int i = 1; i <= 100; i++)
+{
+    if (i % 2 == 0)
+        contador++;
+}
+
+Console.WriteLine("Hay " + contador + " números pares");
+
+}
+
+static void Ejercicio2H()
+{
+string respuesta;
+
+do
+{
+    Console.Write("Ingrese grados Celsius: ");
+    double c = Convert.ToDouble(Console.ReadLine());
+
+    double f = (c * 9 / 5) + 32;
+
+    Console.WriteLine("Fahrenheit: " + f);
+
+    Console.Write("¿Desea continuar? (si/no): ");
+    respuesta = Console.ReadLine();
+
+} while (respuesta == "si");
+
+}
+
+static void Ejercicio2I()
+{
+Console.Write("Ingrese un número: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+
+int contador = 0;
+
+for (int i = 1; i <= numero; i++)
+{
+    if (numero % i == 0)
+        contador++;
+}
+
+if (contador == 2)
+    Console.WriteLine("Es primo");
+else
+    Console.WriteLine("No es primo");
+
+}
+
+static void Ejercicio2J()
+{
+string nombre;
+
+do
+{
+    Console.Write("Ingrese un nombre: ");
+    nombre = Console.ReadLine();
+
+    if (nombre != "fin")
+        Console.WriteLine("Hola " + nombre);
+
+} while (nombre != "fin");
+
+}
+
+static void Ejercicio2K()
+{
+string[] nombres = new string[100];
+
+int cantidad = 0;
+bool repetido = false;
+
+while (repetido == false)
+{
+    Console.Write("Ingrese un nombre: ");
+    string nombre = Console.ReadLine();
+
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (nombres[i] == nombre)
+        {
+            repetido = true;
+        }
+    }
+
+    if (repetido == false)
+    {
+        nombres[cantidad] = nombre;
+        cantidad++;
+    }
+}
+
+Console.WriteLine("Se ingresaron " + cantidad + " nombres antes del repetido.");
+
+}
+
+static void Ejercicio2L()
+{
+for (int i = 100; i <= 200; i++)
+{
+if (i % 7 == 0 && i % 10 == 3)
+{
+Console.WriteLine(i);
+}
+}
+}
+
+static void Ejercicio2M()
+{
+double total = 0;
+int productos = 0;
+
+while (total <= 1000)
+{
+    Console.Write("Ingrese un precio: ");
+    double precio = Convert.ToDouble(Console.ReadLine());
+
+    total += precio;
+    productos++;
+}
+
+Console.WriteLine("Cantidad de productos: " + productos);
+
+}
+
+static void Ejercicio2N()
+{
+Console.Write("Nombre: ");
+string nombre = Console.ReadLine();
+
+Console.Write("Edad: ");
+int edad = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Mail: ");
+string mail = Console.ReadLine();
+
+if (mail.Contains("@"))
+    Console.WriteLine("Datos válidos");
+else
+    Console.WriteLine("Mail inválido");
+
+}
+
+static void Ejercicio2O()
+{
+Console.Write("Ingrese un número: ");
+string numero = Console.ReadLine();
+
+for (int i = 0; i < numero.Length; i++)
+{
+    Console.WriteLine(numero[i]);
+}
+
+}
+
+static void Ejercicio2P()
+{
+int jugador1 = 0;
+int jugador2 = 0;
+
+for (int ronda = 1; ronda <= 3; ronda++)
+{
+    Console.Write("Jugador 1 (piedra/papel/tijera): ");
+    string j1 = Console.ReadLine();
+
+    Console.Write("Jugador 2 (piedra/papel/tijera): ");
+    string j2 = Console.ReadLine();
+
+    if ((j1 == "piedra" && j2 == "tijera") ||
+        (j1 == "papel" && j2 == "piedra") ||
+        (j1 == "tijera" && j2 == "papel"))
+    {
+        jugador1++;
+    }
+    else if ((j2 == "piedra" && j1 == "tijera") ||
+             (j2 == "papel" && j1 == "piedra") ||
+             (j2 == "tijera" && j1 == "papel"))
+    {
+        jugador2++;
+    }
+}
+
+Console.WriteLine("Jugador 1 ganó: " + jugador1);
+Console.WriteLine("Jugador 2 ganó: " + jugador2);
+
+}
+
+static void Ejercicio2R()
+{
+string mejorNombre = "";
+double mejorNota = 0;
+double suma = 0;
+
+for (int i = 1; i <= 5; i++)
+{
+    Console.Write("Nombre: ");
+    string nombre = Console.ReadLine();
+
+    Console.Write("Nota: ");
+    double nota = Convert.ToDouble(Console.ReadLine());
+
+    suma += nota;
+
+    if (i == 1 || nota > mejorNota)
+    {
+        mejorNota = nota;
+        mejorNombre = nombre;
+    }
+}
+
+Console.WriteLine("Promedio: " + (suma / 5));
+Console.WriteLine("Mejor alumno: " + mejorNombre);
+Console.WriteLine("Mejor nota: " + mejorNota);
+
+
+}
+
+static void Ejercicio2S()
+{
+for (char letra = 'Z'; letra >= 'A'; letra--)
+{
+Console.WriteLine(letra);
+}
+}
+
+    public static void Main(string[] args)
+    {
+         int opcion;
+
+    do
+    {
+        Console.WriteLine("\n===== BLOQUE 2 =====");
+        Console.WriteLine("1 - Ejercicio A");
+        Console.WriteLine("2 - Ejercicio B");
+        Console.WriteLine("3 - Ejercicio C");
+        Console.WriteLine("4 - Ejercicio D");
+        Console.WriteLine("5 - Ejercicio E");
+        Console.WriteLine("6 - Ejercicio F");
+        Console.WriteLine("7 - Ejercicio G");
+        Console.WriteLine("8 - Ejercicio H");
+        Console.WriteLine("9 - Ejercicio I");
+        Console.WriteLine("10 - Ejercicio J");
+        Console.WriteLine("11 - Ejercicio K");
+        Console.WriteLine("12 - Ejercicio L");
+        Console.WriteLine("13 - Ejercicio M");
+        Console.WriteLine("14 - Ejercicio N");
+        Console.WriteLine("15 - Ejercicio O");
+        Console.WriteLine("16 - Ejercicio P");
+        Console.WriteLine("17 - Ejercicio R");
+        Console.WriteLine("18 - Ejercicio S");
+        Console.WriteLine("0 - Volver");
+
+        Console.Write("Opción: ");
+        opcion = Convert.ToInt32(Console.ReadLine());
+
+        if (opcion == 1)
+            Ejercicio2A();
+        else if (opcion == 2)
+            Ejercicio2B();
+        else if (opcion == 3)
+            Ejercicio2C();
+        else if (opcion == 4)
+            Ejercicio2D();
+        else if (opcion == 5)
+            Ejercicio2E();
+        else if (opcion == 6)
+            Ejercicio2F();
+        else if (opcion == 7)
+            Ejercicio2G();
+        else if (opcion == 8)
+            Ejercicio2H();
+        else if (opcion == 9)
+            Ejercicio2I();
+        else if (opcion == 10)
+            Ejercicio2J();
+        else if (opcion == 11)
+            Ejercicio2K();
+        else if (opcion == 12)
+            Ejercicio2L();
+        else if (opcion == 13)
+            Ejercicio2M();
+        else if (opcion == 14)
+            Ejercicio2N();
+        else if (opcion == 15)
+            Ejercicio2O();
+        else if (opcion == 16)
+            Ejercicio2P();
+        else if (opcion == 17)
+            Ejercicio2R();
+        else if (opcion == 18)
+            Ejercicio2S();
+
+    } while (opcion != 0);
+    }
+}
