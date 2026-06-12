@@ -1,0 +1,305 @@
+using System;
+
+public class HelloWorld
+{
+    static void Ejercicio1A()
+{
+    for (int i = 1; i <= 100; i++)
+    {
+        if (i % 3 == 0)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
+static void Ejercicio1B()
+{
+    Console.Write("Ingrese su edad: ");
+    int edad = Convert.ToInt32(Console.ReadLine());
+
+    if (edad < 18)
+        Console.WriteLine("Menor de edad");
+    else if (edad == 18)
+        Console.WriteLine("Tiene justo 18");
+    else
+        Console.WriteLine("Mayor de edad");
+}
+
+static void Ejercicio1C()
+{
+    Console.Write("Ingrese una palabra: ");
+    string palabra = Console.ReadLine();
+
+    Console.WriteLine("Tiene " + palabra.Length + " letras");
+}
+
+static void Ejercicio1D()
+{
+    string clave = "alegracias";
+
+    for (int i = 1; i <= 5; i++)
+    {
+        Console.Write("Ingrese la contraseña: ");
+        string intento = Console.ReadLine();
+
+        if (intento == clave)
+        {
+            Console.WriteLine("Correcta");
+            break;
+        }
+    }
+}
+
+static void Ejercicio1E()
+{
+    int mayor = 0;
+
+    for (int i = 1; i <= 10; i++)
+    {
+        Console.Write("Ingrese un número: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (i == 1 || num > mayor)
+        {
+            mayor = num;
+        }
+    }
+
+    Console.WriteLine("El mayor es: " + mayor);
+}
+
+static void Ejercicio1F()
+{
+    Console.Write("Ingrese su nombre: ");
+    string nombre = Console.ReadLine();
+
+    Console.WriteLine("Hola " + nombre.ToUpper());
+}
+
+static void Ejercicio1G()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        Console.WriteLine("7 x " + i + " = " + (7 * i));
+    }
+}
+
+static void Ejercicio1H()
+{
+    for (int i = 10; i >= 1; i--)
+    {
+        Console.WriteLine(i);
+    }
+
+    Console.WriteLine("oa");
+}
+
+static void Ejercicio1I()
+{
+    Console.Write("Ingrese un número: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+
+    if (num % 2 == 0)
+        Console.WriteLine("Par");
+    else
+        Console.WriteLine("Impar");
+}
+
+static void Ejercicio1J()
+{
+    Console.Write("Ingrese una frase: ");
+    string frase = Console.ReadLine().ToLower();
+
+    int contador = 0;
+
+    foreach (char letra in frase)
+    {
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
+        {
+            contador++;
+        }
+    }
+
+    Console.WriteLine("Cantidad de vocales: " + contador);
+}
+
+static void Ejercicio1K()
+{
+    Console.Write("Ingrese un número: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+
+    for (int i = 1; i <= 12; i++)
+    {
+        Console.WriteLine(num + " x " + i + " = " + (num * i));
+    }
+}
+
+static void Ejercicio1L()
+{
+    int suma = 0;
+
+    while (suma <= 100)
+    {
+        Console.Write("Ingrese un número: ");
+        suma += Convert.ToInt32(Console.ReadLine());
+    }
+
+    Console.WriteLine("Total acumulado: " + suma);
+}
+
+static void Ejercicio1M()
+{
+    Console.Write("Ingrese una palabra: ");
+    string palabra = Console.ReadLine();
+
+    foreach (char letra in palabra)
+    {
+        Console.WriteLine(letra);
+    }
+}
+
+static void Ejercicio1N()
+{
+    Console.Write("Ingrese su edad: ");
+    int edad = Convert.ToInt32(Console.ReadLine());
+
+    if (edad >= 18)
+        Console.WriteLine("Puede votar y manejar");
+    else if (edad >= 16)
+        Console.WriteLine("Puede votar");
+    else
+        Console.WriteLine("No puede ninguna");
+}
+
+static void Ejercicio1O()
+{
+    for (int i = 50; i >= 0; i -= 5)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+static void Ejercicio1P()
+{
+    string clave1;
+    string clave2;
+
+    do
+    {
+        Console.Write("Ingrese una contraseña: ");
+        clave1 = Console.ReadLine();
+
+        Console.Write("Repita la contraseña: ");
+        clave2 = Console.ReadLine();
+
+    } while (clave1 != clave2);
+
+    Console.WriteLine("Acceso permitido");
+}
+
+static void Ejercicio1Q()
+{
+    string nombre;
+
+    do
+    {
+        Console.Write("Ingrese un nombre: ");
+        nombre = Console.ReadLine();
+
+    } while (nombre.Length <= 10);
+
+    Console.WriteLine("Fin del programa");
+}
+
+static void Ejercicio1R()
+{
+    Console.Write("Ingrese una oración: ");
+    string oracion = Console.ReadLine().ToLower();
+
+    int contador = 0;
+
+    foreach (char letra in oracion)
+    {
+        if (letra == 'a')
+        {
+            contador++;
+        }
+    }
+
+    Console.WriteLine("Cantidad de letras a: " + contador);
+}
+
+
+    public static void Main(string[] args)
+    {
+        int opcion;
+
+    do
+    {
+        Console.WriteLine("\n===== BLOQUE 1 =====");
+        Console.WriteLine("1 - Ejercicio A");
+        Console.WriteLine("2 - Ejercicio B");
+        Console.WriteLine("3 - Ejercicio C");
+        Console.WriteLine("4 - Ejercicio D");
+        Console.WriteLine("5 - Ejercicio E");
+        Console.WriteLine("6 - Ejercicio F");
+        Console.WriteLine("7 - Ejercicio G");
+        Console.WriteLine("8 - Ejercicio H");
+        Console.WriteLine("9 - Ejercicio I");
+        Console.WriteLine("10 - Ejercicio J");
+        Console.WriteLine("11 - Ejercicio K");
+        Console.WriteLine("12 - Ejercicio L");
+        Console.WriteLine("13 - Ejercicio M");
+        Console.WriteLine("14 - Ejercicio N");
+        Console.WriteLine("15 - Ejercicio O");
+        Console.WriteLine("16 - Ejercicio P");
+        Console.WriteLine("17 - Ejercicio Q");
+        Console.WriteLine("18 - Ejercicio R");
+        Console.WriteLine("0 - Volver");
+
+        Console.Write("Opción: ");
+        opcion = Convert.ToInt32(Console.ReadLine());
+
+        if (opcion == 1)
+            Ejercicio1A();
+        else if (opcion == 2)
+            Ejercicio1B();
+        else if (opcion == 3)
+            Ejercicio1C();
+        else if (opcion == 4)
+            Ejercicio1D();
+        else if (opcion == 5)
+            Ejercicio1E();
+        else if (opcion == 6)
+            Ejercicio1F();
+        else if (opcion == 7)
+            Ejercicio1G();
+        else if (opcion == 8)
+            Ejercicio1H();
+        else if (opcion == 9)
+            Ejercicio1I();
+        else if (opcion == 10)
+            Ejercicio1J();
+        else if (opcion == 11)
+            Ejercicio1K();
+        else if (opcion == 12)
+            Ejercicio1L();
+        else if (opcion == 13)
+            Ejercicio1M();
+        else if (opcion == 14)
+            Ejercicio1N();
+        else if (opcion == 15)
+            Ejercicio1O();
+        else if (opcion == 16)
+            Ejercicio1P();
+        else if (opcion == 17)
+            Ejercicio1Q();
+        else if (opcion == 18)
+            Ejercicio1R();
+
+    } while (opcion != 0);
+    }
+}
+
+BLOQUE 2
