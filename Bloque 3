@@ -1,0 +1,360 @@
+using System;
+
+public class HelloWorld
+{
+    static void Ejercicio3A()
+{
+    int opcion1 = 0;
+    int opcion2 = 0;
+    int opcion3 = 0;
+
+    string voto;
+
+    do
+    {
+        Console.WriteLine("1 - Pizza");
+        Console.WriteLine("2 - Hamburguesa");
+        Console.WriteLine("3 - Empanadas");
+        Console.Write("Voto (o terminar): ");
+        voto = Console.ReadLine();
+
+        if (voto == "1")
+            opcion1++;
+        else if (voto == "2")
+            opcion2++;
+        else if (voto == "3")
+            opcion3++;
+
+    } while (voto != "terminar");
+
+    if (opcion1 > opcion2 && opcion1 > opcion3)
+        Console.WriteLine("Ganó Pizza");
+    else if (opcion2 > opcion1 && opcion2 > opcion3)
+        Console.WriteLine("Ganó Hamburguesa");
+    else
+        Console.WriteLine("Ganó Empanadas");
+}
+
+static void Ejercicio3B()
+{
+    Console.Write("Número: ");
+    int numero = Convert.ToInt32(Console.ReadLine());
+
+    if (numero < 1)
+    {
+        Console.WriteLine("No se puede");
+    }
+    else
+    {
+        for (int i = 1; i <= numero; i++)
+        {
+            if (i % 2 != 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+static void Ejercicio3C()
+{
+    Console.Write("Palabra: ");
+    string palabra = Console.ReadLine();
+
+    Console.Write("Letra: ");
+    char letra = Convert.ToChar(Console.ReadLine());
+
+    int contador = 0;
+
+    for (int i = 0; i < palabra.Length; i++)
+    {
+        if (palabra[i] == letra)
+        {
+            contador++;
+        }
+    }
+
+    Console.WriteLine("Aparece " + contador + " veces");
+}
+
+static void Ejercicio3D()
+{
+    double saldo = 1000;
+    int opcion;
+
+    do
+    {
+        Console.WriteLine("Saldo: $" + saldo);
+        Console.WriteLine("1- Depositar");
+        Console.WriteLine("2- Retirar");
+        Console.WriteLine("0- Salir");
+
+        opcion = Convert.ToInt32(Console.ReadLine());
+
+        if (opcion == 1)
+        {
+            Console.Write("Monto: ");
+            saldo += Convert.ToDouble(Console.ReadLine());
+        }
+        else if (opcion == 2)
+        {
+            Console.Write("Monto: ");
+            double retiro = Convert.ToDouble(Console.ReadLine());
+
+            if (retiro <= saldo)
+                saldo -= retiro;
+            else
+                Console.WriteLine("Saldo insuficiente");
+        }
+
+    } while (opcion != 0);
+}
+
+static void Ejercicio3E()
+{
+    int contador = 0;
+    int numero = 1;
+
+    while (contador < 50)
+    {
+        if ((numero % 2 == 0 || numero % 5 == 0) &&
+            !(numero % 2 == 0 && numero % 5 == 0))
+        {
+            Console.WriteLine(numero);
+            contador++;
+        }
+
+        numero++;
+    }
+}
+
+static void Ejercicio3F()
+{
+    Console.Write("Palabra: ");
+    string palabra = Console.ReadLine().ToUpper();
+
+    for (int i = 0; i < palabra.Length; i++)
+    {
+        Console.WriteLine((int)palabra[i] - 64);
+    }
+}
+
+static void Ejercicio3G()
+{
+    int secreto = 7;
+    int intento;
+    int cantidad = 0;
+
+    do
+    {
+        Console.Write("Número: ");
+        intento = Convert.ToInt32(Console.ReadLine());
+
+        cantidad++;
+
+        if (intento < secreto)
+            Console.WriteLine("Más grande");
+        else if (intento > secreto)
+            Console.WriteLine("Más chico");
+
+    } while (intento != secreto);
+
+    Console.WriteLine("Acertó en " + cantidad + " intentos");
+}
+
+static void Ejercicio3H()
+{
+    Console.Write("Frase: ");
+    string frase = Console.ReadLine();
+
+    string[] palabras = frase.Split(' ');
+
+    for (int i = 0; i < palabras.Length; i++)
+    {
+        for (int j = palabras[i].Length - 1; j >= 0; j--)
+        {
+            Console.Write(palabras[i][j]);
+        }
+
+        Console.Write(" ");
+    }
+}
+
+static void Ejercicio3I()
+{
+    Console.Write("Palabra: ");
+    string palabra = Console.ReadLine();
+
+    for (int i = 0; i < palabra.Length; i++)
+    {
+        int contador = 0;
+
+        for (int j = 0; j < palabra.Length; j++)
+        {
+            if (palabra[i] == palabra[j])
+            {
+                contador++;
+            }
+        }
+
+        Console.WriteLine(palabra[i] + ": " + contador);
+    }
+}
+
+static void Ejercicio3J()
+{
+    string usuario = "Sharon";
+    string clave = "Mireco";
+
+    int intentos = 0;
+
+    while (intentos < 3)
+    {
+        Console.Write("Usuario: ");
+        string u = Console.ReadLine();
+
+        Console.Write("Clave: ");
+        string c = Console.ReadLine();
+
+        if (u == usuario && c == clave)
+        {
+            Console.WriteLine("Bienvenido");
+            break;
+        }
+
+        intentos++;
+    }
+}
+
+static void Ejercicio3K()
+{
+    Console.Write("Número: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+
+    if (n >= 0 && n <= 25)
+        Console.WriteLine("0-25");
+    else if (n <= 50)
+        Console.WriteLine("26-50");
+    else if (n <= 75)
+        Console.WriteLine("51-75");
+    else if (n <= 100)
+        Console.WriteLine("76-100");
+}
+
+static void Ejercicio3L()
+{
+    Console.Write("Peso: ");
+    double peso = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Altura: ");
+    double altura = Convert.ToDouble(Console.ReadLine());
+
+    double imc = peso / (altura * altura);
+
+    Console.WriteLine("IMC: " + imc);
+
+    if (imc < 18.5)
+        Console.WriteLine("Bajo peso");
+    else if (imc < 25)
+        Console.WriteLine("Normal");
+    else if (imc < 30)
+        Console.WriteLine("Sobrepeso");
+    else
+        Console.WriteLine("Obesidad");
+}
+
+static void Ejercicio3M()
+{
+    Console.Write("Palabra: ");
+    string palabra = Console.ReadLine();
+
+    for (int i = 1; i <= palabra.Length; i++)
+    {
+        Console.WriteLine(palabra.Substring(0, i));
+    }
+}
+
+static void Ejercicio3N()
+{
+    string frase;
+
+    do
+    {
+        Console.Write("Frase: ");
+        frase = Console.ReadLine();
+
+        if (frase != "agusysharon")
+        {
+            Console.WriteLine(
+                frase.Replace('a', 'e')
+                     .Replace('i', 'e')
+                     .Replace('o', 'e')
+                     .Replace('u', 'e'));
+
+            Console.WriteLine(
+                frase.Replace('e', 'i')
+                     .Replace('a', 'i')
+                     .Replace('o', 'i')
+                     .Replace('u', 'i'));
+        }
+
+    } while (frase != "agusysharon");
+}
+    public static void Main(string[] args)
+    {
+        int opcion;
+
+    do
+    {
+        Console.WriteLine("\n===== BLOQUE 3 =====");
+        Console.WriteLine("1 - Ejercicio A");
+        Console.WriteLine("2 - Ejercicio B");
+        Console.WriteLine("3 - Ejercicio C");
+        Console.WriteLine("4 - Ejercicio D");
+        Console.WriteLine("5 - Ejercicio E");
+        Console.WriteLine("6 - Ejercicio F");
+        Console.WriteLine("7 - Ejercicio G");
+        Console.WriteLine("8 - Ejercicio H");
+        Console.WriteLine("9 - Ejercicio I");
+        Console.WriteLine("10 - Ejercicio J");
+        Console.WriteLine("11 - Ejercicio K");
+        Console.WriteLine("12 - Ejercicio L");
+        Console.WriteLine("13 - Ejercicio M");
+        Console.WriteLine("14 - Ejercicio N");
+        Console.WriteLine("0 - Volver");
+
+        Console.Write("Opción: ");
+        opcion = Convert.ToInt32(Console.ReadLine());
+
+        if (opcion == 1)
+            Ejercicio3A();
+        else if (opcion == 2)
+            Ejercicio3B();
+        else if (opcion == 3)
+            Ejercicio3C();
+        else if (opcion == 4)
+            Ejercicio3D();
+        else if (opcion == 5)
+            Ejercicio3E();
+        else if (opcion == 6)
+            Ejercicio3F();
+        else if (opcion == 7)
+            Ejercicio3G();
+        else if (opcion == 8)
+            Ejercicio3H();
+        else if (opcion == 9)
+            Ejercicio3I();
+        else if (opcion == 10)
+            Ejercicio3J();
+        else if (opcion == 11)
+            Ejercicio3K();
+        else if (opcion == 12)
+            Ejercicio3L();
+        else if (opcion == 13)
+            Ejercicio3M();
+        else if (opcion == 14)
+            Ejercicio3N();
+
+    } while (opcion != 0);
+ }
+}
