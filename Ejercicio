@@ -1,0 +1,393 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int opcion;
+
+        do
+        {
+            Console.WriteLine("1 - Ejercicio 1");
+            Console.WriteLine("2 - Ejercicio 2");
+            Console.WriteLine("3 - Ejercicio 3");
+            Console.WriteLine("4 - Ejercicio 4");
+            Console.WriteLine("5 - Ejercicio 5");
+            Console.WriteLine("6 - Ejercicio 6");
+            Console.WriteLine("7 - Ejercicio 7");
+            Console.WriteLine("8 - Ejercicio 8");
+            Console.WriteLine("9 - Ejercicio 9");
+            Console.WriteLine("10 - Ejercicio 10");
+            Console.WriteLine("11 - Ejercicio 11");
+            Console.WriteLine("12 - Ejercicio 12");
+            Console.WriteLine("13 - Ejercicio 13");
+            Console.WriteLine("14 - Ejercicio 14");
+            Console.WriteLine("0 - Salir");
+
+            Console.Write("Opción: ");
+            opcion = Convert.ToInt32(Console.ReadLine());
+
+            if (opcion == 1)
+            {
+                Ejercicio1();
+            }
+
+            if (opcion == 2)
+            {
+                Ejercicio2();
+            }
+
+            if (opcion == 3)
+            {
+                Ejercicio3();
+            }
+
+            if (opcion == 4)
+            {
+                Ejercicio4();
+            }
+
+            if (opcion == 5)
+            {
+                Ejercicio5();
+            }
+
+            if (opcion == 6)
+            {
+                Ejercicio6();
+            }
+
+            if (opcion == 7)
+            {
+                Ejercicio7();
+            }
+
+            if (opcion == 8)
+            {
+                Ejercicio8();
+            }
+
+            if (opcion == 9)
+            {
+                Ejercicio9();
+            }
+
+            if (opcion == 10)
+            {
+                Ejercicio10();
+            }
+
+            if (opcion == 11)
+            {
+                Ejercicio11();
+            }
+
+            if (opcion == 12)
+            {
+                Ejercicio12();
+            }
+
+            if (opcion == 13)
+            {
+                Ejercicio13();
+            }
+
+            if (opcion == 14)
+            {
+                Ejercicio14();
+            }
+
+        } while (opcion != 0);
+
+    } 
+
+
+
+    static void Ejercicio1()
+    {
+        Console.Write("Ingrese una frase: ");
+        string frase = Console.ReadLine();
+
+        Console.WriteLine("Cantidad de caracteres: " + frase.Length);
+    }
+
+    static void Ejercicio2()
+    {
+        Console.Write("Ingrese una palabra: ");
+        string palabra = Console.ReadLine();
+
+        Console.WriteLine("Mayúsculas: " + palabra.ToUpper());
+        Console.WriteLine("Minúsculas: " + palabra.ToLower());
+        Console.WriteLine("Cantidad de caracteres: " + palabra.Length);
+    }
+
+    static void Ejercicio3()
+    {
+        Console.Write("Ingrese una frase: ");
+        string frase = Console.ReadLine();
+
+        int vocales = 0;
+
+        foreach (char letra in frase)
+        {
+            if ("aeiouAEIOU".Contains(letra))
+            {
+                vocales++;
+            }
+        }
+
+        Console.WriteLine("Cantidad de vocales: " + vocales);
+    }
+
+    static void Ejercicio4()
+    {
+        try
+        {
+            Console.Write("Ingrese una palabra: ");
+            string palabra = Console.ReadLine();
+
+            Console.WriteLine("Primera letra: " + palabra[0]);
+            Console.WriteLine("Última letra: " + palabra[palabra.Length - 1]);
+        }
+        catch
+        {
+            Console.WriteLine("La cadena está vacía.");
+        }
+    }
+
+    static void Ejercicio5()
+    {
+        try
+        {
+            Console.Write("Ingrese el primer número: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Ingrese el segundo número: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Resultado: " + (num1 / num2));
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Debe ingresar números válidos.");
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("No se puede dividir por cero.");
+        }
+    }
+
+    static void Ejercicio6()
+    {
+        try
+        {
+            Console.Write("Ingrese una palabra: ");
+            string palabra = Console.ReadLine();
+
+            Console.Write("Ingrese una posición: ");
+            int posicion = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Carácter: " + palabra[posicion]);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Debe ingresar un número válido.");
+        }
+        catch (IndexOutOfRangeException)
+        {
+            Console.WriteLine("Posición fuera de rango.");
+        }
+    }
+
+    static void Ejercicio7()
+    {
+        Console.Write("Ingrese una frase: ");
+        string frase = Console.ReadLine();
+
+        Console.Write("Ingrese una palabra: ");
+        string palabra = Console.ReadLine();
+
+        if (frase.Contains(palabra))
+        {
+            Console.WriteLine("La palabra se encuentra dentro de la frase.");
+        }
+        else
+        {
+            Console.WriteLine("La palabra NO se encuentra dentro de la frase.");
+        }
+    }
+
+    static void Ejercicio8()
+    {
+        try
+        {
+            Console.Write("Ingrese números separados por coma: ");
+            string texto = Console.ReadLine();
+
+            string[] numeros = texto.Split(',');
+
+            int suma = 0;
+
+            foreach (string numero in numeros)
+            {
+                suma += Convert.ToInt32(numero);
+            }
+
+            Console.WriteLine("Suma total: " + suma);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Error al convertir uno de los valores.");
+        }
+    }
+
+    static void Ejercicio9()
+    {
+        Console.Write("Ingrese una palabra: ");
+        string palabra = Console.ReadLine();
+
+        char[] letras = palabra.ToCharArray();
+
+        Array.Reverse(letras);
+
+        Console.WriteLine("Texto invertido: " + new string(letras));
+    }
+
+    static void Ejercicio10()
+    {
+        try
+        {
+            Console.Write("Ingrese una contraseña: ");
+            string contraseña = Console.ReadLine();
+
+            bool tieneNumero = false;
+
+            foreach (char c in contraseña)
+            {
+                if (char.IsDigit(c))
+                {
+                    tieneNumero = true;
+                }
+            }
+
+            if (contraseña.Length < 8 || !tieneNumero)
+            {
+                throw new ArgumentException();
+            }
+
+            Console.WriteLine("Contraseña válida.");
+        }
+        catch (ArgumentException)
+        {
+            Console.WriteLine("La contraseña debe tener al menos 8 caracteres y un número.");
+        }
+    }
+
+    static void Ejercicio11()
+    {
+        try
+        {
+            Console.Write("Ingrese una edad: ");
+            int edad = Convert.ToInt32(Console.ReadLine());
+
+            if (edad < 1 || edad > 120)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            Console.WriteLine("Edad válida.");
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            Console.WriteLine("La edad debe estar entre 1 y 120.");
+        }
+    }
+
+    static void Ejercicio12()
+    {
+        try
+        {
+            string texto = null;
+
+            Console.WriteLine(texto.Length);
+        }
+        catch (NullReferenceException)
+        {
+            Console.WriteLine("Se intentó acceder a una referencia nula.");
+        }
+    }
+
+    static void Ejercicio13()
+    {
+        try
+        {
+            Console.Write("Ingrese el primer número: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Ingrese el segundo número: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            checked
+            {
+                int suma = num1 + num2;
+                Console.WriteLine("Resultado: " + suma);
+            }
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Se produjo un overflow.");
+        }
+    }
+
+    static void Ejercicio14()
+    {
+        try
+        {
+            Console.Write("Ingrese una frase: ");
+            string frase = Console.ReadLine();
+
+            Console.WriteLine("Cantidad de caracteres: " + frase.Length);
+
+            string[] palabras = frase.Split(' ');
+            Console.WriteLine("Cantidad de palabras: " + palabras.Length);
+
+            int vocales = 0;
+
+            foreach (char letra in frase)
+            {
+                if ("aeiouAEIOU".Contains(letra))
+                {
+                    vocales++;
+                }
+            }
+
+            Console.WriteLine("Cantidad de vocales: " + vocales);
+
+            Console.Write("Ingrese una posición: ");
+            int posicion = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Carácter encontrado: " + frase[posicion]);
+
+            Console.Write("Ingrese un número: ");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("100 / número = " + (100 / numero));
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Error de formato.");
+        }
+        catch (IndexOutOfRangeException)
+        {
+            Console.WriteLine("Posición fuera de rango.");
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("No se puede dividir por cero.");
+        }
+        catch (ArgumentException)
+        {
+            Console.WriteLine("Error de argumento.");
+        }
+    }
+}
