@@ -1,0 +1,383 @@
+Ejercicio 1)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] peliculas = new string[5];
+
+        for (int i = 0; i < peliculas.Length; i++)
+        {
+            Console.Write("Ingrese una película: ");
+            peliculas[i] = Console.ReadLine();
+        }
+
+        Console.WriteLine("Películas ingresadas:");
+
+        foreach (string pelicula in peliculas)
+        {
+            Console.WriteLine(pelicula);
+        }
+    }
+}
+
+Ejercicio 2)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros = new int[6];
+
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            Console.Write("Ingrese un número: ");
+            numeros[i] = int.Parse(Console.ReadLine());
+        }
+
+        int pares = 0;
+        int impares = 0;
+
+        foreach (int n in numeros)
+        {
+            if (n % 2 == 0)
+            {
+                pares++;
+            }
+            else
+            {
+                impares++;
+            }
+        }
+
+        Console.WriteLine("Pares: " + pares);
+        Console.WriteLine("Impares: " + impares);
+    }
+}
+
+Ejercicio 3)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] ciudades =
+        {
+            "Madrid",
+            "Buenos Aires",
+            "Bogotá",
+            "Lima",
+            "Santiago"
+        };
+
+        Console.Write("Ingrese una ciudad: ");
+        string buscada = Console.ReadLine();
+
+        int posicion = -1;
+
+        for (int i = 0; i < ciudades.Length; i++)
+        {
+            if (ciudades[i] == buscada)
+            {
+                posicion = i;
+                break;
+            }
+        }
+
+        if (posicion != -1)
+        {
+            Console.WriteLine("Ciudad encontrada en índice: " + posicion);
+        }
+        else
+        {
+            Console.WriteLine("Ciudad no encontrada");
+        }
+    }
+}
+
+Ejercicio 4)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] notas = new int[5];
+        int suma = 0;
+
+        for (int i = 0; i < notas.Length; i++)
+        {
+            Console.Write("Ingrese una nota: ");
+            notas[i] = int.Parse(Console.ReadLine());
+        }
+
+        for (int i = 0; i < notas.Length; i++)
+        {
+            suma += notas[i];
+        }
+
+        double promedio = (double)suma / notas.Length;
+
+        Console.WriteLine("Promedio: " + promedio);
+
+        if (promedio >= 6)
+        {
+            Console.WriteLine("Aprobado");
+        }
+        else
+        {
+            Console.WriteLine("Reprobado");
+        }
+    }
+}
+
+Ejercicio 5)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros = { 10, 20, 30, 40, 50, 0 };
+
+        Console.Write("Ingrese un número: ");
+        int nuevoValor = int.Parse(Console.ReadLine());
+
+        int indiceInsertar = 2;
+
+        for (int i = numeros.Length - 1; i > indiceInsertar; i--)
+        {
+            numeros[i] = numeros[i - 1];
+        }
+
+        numeros[indiceInsertar] = nuevoValor;
+
+        Console.WriteLine("Vector resultante:");
+
+        foreach (int n in numeros)
+        {
+            Console.Write(n + " ");
+        }
+    }
+}
+
+Ejercicio 6)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] colores =
+        {
+            "Rojo",
+            "Verde",
+            "Azul",
+            "Amarillo",
+            "Negro"
+        };
+
+        Console.Write("Ingrese un índice (0 a 4): ");
+        int indiceEliminar = int.Parse(Console.ReadLine());
+
+        for (int i = indiceEliminar; i < colores.Length - 1; i++)
+        {
+            colores[i] = colores[i + 1];
+        }
+
+        colores[colores.Length - 1] = "";
+
+        Console.WriteLine("Vector actualizado:");
+
+        foreach (string color in colores)
+        {
+            Console.WriteLine(color);
+        }
+    }
+}
+
+Ejercicio 7)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros =
+        {
+            1,2,3,4,5,6,7,8,9,10
+        };
+
+        int[] subVector = numeros[3..8];
+
+        Console.WriteLine("Subvector:");
+
+        foreach (int n in subVector)
+        {
+            Console.WriteLine(n);
+        }
+    }
+}
+
+Ejercicio 8)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros = new int[8];
+
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            Console.Write("Ingrese un número: ");
+            numeros[i] = int.Parse(Console.ReadLine());
+        }
+
+        int mayor = numeros[0];
+        int posicion = 0;
+
+        for (int i = 1; i < numeros.Length; i++)
+        {
+            if (numeros[i] > mayor)
+            {
+                mayor = numeros[i];
+                posicion = i;
+            }
+        }
+
+        Console.WriteLine("Número mayor: " + mayor);
+        Console.WriteLine("Posición: " + posicion);
+    }
+}
+
+Ejercicio 9)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] palabras = new string[5];
+
+        for (int i = 0; i < palabras.Length; i++)
+        {
+            Console.Write("Ingrese una palabra: ");
+            palabras[i] = Console.ReadLine();
+        }
+
+        string resultado = "";
+
+        foreach (string palabra in palabras)
+        {
+            if (palabra.Length > 4)
+            {
+                resultado += palabra + " ";
+            }
+        }
+
+        Console.WriteLine("Resultado:");
+        Console.WriteLine(resultado);
+    }
+}
+
+Ejercicio 10)
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numeros = new int[5];
+
+        int opcion = 0;
+
+        while (opcion != 5)
+        {
+            Console.WriteLine();
+            Console.WriteLine("1 - Cargar vector");
+            Console.WriteLine("2 - Mostrar vector");
+            Console.WriteLine("3 - Buscar número");
+            Console.WriteLine("4 - Sumar elementos");
+            Console.WriteLine("5 - Salir");
+
+            Console.Write("Opción: ");
+            opcion = int.Parse(Console.ReadLine());
+
+            if (opcion == 1)
+            {
+                for (int i = 0; i < numeros.Length; i++)
+                {
+                    Console.Write("Ingrese un número: ");
+                    numeros[i] = int.Parse(Console.ReadLine());
+                }
+            }
+            else if (opcion == 2)
+            {
+                foreach (int n in numeros)
+                {
+                    Console.Write(n + " ");
+                }
+
+                Console.WriteLine();
+            }
+            else if (opcion == 3)
+            {
+                Console.Write("Número a buscar: ");
+                int buscado = int.Parse(Console.ReadLine());
+
+                int posicion = -1;
+
+                for (int i = 0; i < numeros.Length; i++)
+                {
+                    if (numeros[i] == buscado)
+                    {
+                        posicion = i;
+                        break;
+                    }
+                }
+
+                if (posicion != -1)
+                {
+                    Console.WriteLine("Encontrado en posición: " + posicion);
+                }
+                else
+                {
+                    Console.WriteLine("No encontrado");
+                }
+            }
+            else if (opcion == 4)
+            {
+                int suma = 0;
+
+                for (int i = 0; i < numeros.Length; i++)
+                {
+                    suma += numeros[i];
+                }
+
+                Console.WriteLine("Suma total: " + suma);
+            }
+            else if (opcion == 5)
+            {
+                Console.WriteLine("Programa finalizado.");
+            }
+            else
+            {
+                Console.WriteLine("Opción incorrecta.");
+            }
+        }
+    }
+}
